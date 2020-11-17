@@ -1,11 +1,13 @@
 class Vehicle:
-    def _init_(self,registerdNo,color):
+    def __init__(self, regno, color):
         self.color = color
-        self.registerdNo = registerdNo
+        self.regno = regno
+
 
 class Car(Vehicle):
-    def _init_(self,regno,color):
-        Vehicle._init_(self,registerdNo,color)
+
+    def __init__(self, regno, color):
+        Vehicle.__init__(self, regno, color)
 
     def getType(self):
-        return "Car "
+        return "Car"
